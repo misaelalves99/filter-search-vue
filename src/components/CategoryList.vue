@@ -16,12 +16,10 @@
 <script lang="ts" setup>
 import { defineEmits } from 'vue';
 
-interface Props {
+defineProps<{
   categories: string[];
   selectedCategory: string;
-}
-
-defineProps<Props>();
+}>();
 
 const emit = defineEmits<{
   (e: 'categorySelect', category: string): void;
