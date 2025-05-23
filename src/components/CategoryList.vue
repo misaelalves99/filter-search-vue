@@ -14,14 +14,14 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineEmits } from 'vue';
+import { defineEmits } from 'vue';
 
 interface Props {
   categories: string[];
   selectedCategory: string;
 }
 
-const props = defineProps<Props>();
+defineProps<Props>();
 
 const emit = defineEmits<{
   (e: 'categorySelect', category: string): void;
